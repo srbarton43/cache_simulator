@@ -13,9 +13,9 @@ all: cache_simulation
 cache_simulation: $S/cache_simulation.o
 	$(CC) $(CFLAGS) -o $@ $< $(OBJS)
 
-src/cache_simulation.o: $S/cache_simulation.c $S/cache.o
+$S/cache_simulation.o: $S/cache_simulation.c $S/cache.o
 
-src/cache.o: $L/cache.h
+$S/cache.o: $S/cache.c $L/cache.h
 	$(CC) $(CFLAGS) -c $S/cache.c -o $@
 
 test: cache_simulation

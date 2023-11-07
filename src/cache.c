@@ -107,7 +107,7 @@ void cache_add(int verbose, int type, const unsigned int addr, const int count, 
   line_t* line;                                 // current line
   for (unsigned int i = 0; i < no_lines; i++) {
     line = set->lines[i];
-    if (verbose) printf("line 0x%x V=%d tag 0x%06x last_touch=%07d\n", i, line->isValid, line->tag, line->lastTouched);
+    if (verbose) printf("line 0x%02x V=%d tag 0x%07x last_touch=%07d\n", i, line->isValid, line->tag, line->lastTouched);
     if (line->isValid == 1 && line->tag == tag) {
       hit_line = i;
       break;
