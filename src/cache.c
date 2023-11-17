@@ -27,8 +27,6 @@
 // cache-type enum
 enum cache_type {DIR_MAP, TWO_WAY, FOUR_WAY, FULL_ASS, ALL};
 
-
-
 // cache structures
 typedef struct line {
   int isValid;

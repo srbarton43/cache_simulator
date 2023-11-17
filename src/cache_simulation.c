@@ -32,7 +32,7 @@
 enum cache_type {DIR_MAP, TWO_WAY, FOUR_WAY, FULL_ASS, ALL};
 
 // function prototypes
-int parseArgs (const int argc, char* argv[], int* verbose, int* cType, char** filename, FILE** fp);
+int parseArgs (int argc, char* argv[], int* verbose, int* cType, char** filename, FILE** fp);
 
 int main (int argc, char* argv[]) {
 
@@ -63,7 +63,6 @@ int main (int argc, char* argv[]) {
     case TWO_WAY:
       tw_cache = init_cache(32, 2);
       if (tw_cache == NULL) exit(99);
-      break;
       break;
     case FOUR_WAY:
       fw_cache = init_cache(16, 4);
@@ -225,6 +224,9 @@ int main (int argc, char* argv[]) {
       free_cache(dm_cache, 64, 1);
       free_cache(tw_cache, 32, 2);
       free_cache(fw_cache, 16, 4);
+      break;
+    default:
+      printf("wtf\n");
   }
 
 
