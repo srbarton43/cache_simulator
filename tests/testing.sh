@@ -4,7 +4,7 @@ echo "Testing Sample.txt"
 ########## DM ############
 ./cache_simulation -v -t 0 traces/sample.txt
 
-echo ########## TWO-WAY ############
+########## TWO-WAY ############
 ./cache_simulation -v -t 1 traces/sample.txt
 
 ########## FOUR-WAY ############

@@ -19,7 +19,7 @@ $S/cache.o: $S/cache.c $L/cache.h
 	$(CC) $(CFLAGS) -c $S/cache.c -o $@
 
 test: cache_simulation
-	bash -v testing.sh
+	bash -v tests/testing.sh
 
 clean:
 	rm -f cache_simulation src/*.o
