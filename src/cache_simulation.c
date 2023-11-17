@@ -11,7 +11,7 @@
 #include <unistd.h>
 #include <time.h>
 
-#include "cache.h"
+#include "../include/cache.h"
 
 // helpful pre-processor macros 
 #define p_error(msg) fprintf(stderr, "%s\n", msg)

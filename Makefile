@@ -6,7 +6,7 @@ S = ./src
 
 OBJS = $S/cache.o
 CC = gcc
-CFLAGS = -Wall -pedantic -I$L
+CFLAGS = -Wall -I$L
 
 all: cache_simulation
 
